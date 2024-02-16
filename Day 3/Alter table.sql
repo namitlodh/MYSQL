@@ -41,3 +41,19 @@ SELECT * FROM company_info;
 
 ALTER TABLE company_info DROP CONSTRAINT projId_pk,
 Column revenue, projectId;
+
+Create table customer(accno int,
+cust_name char(100));
+
+ALTER TABLE customer ALTER COLUMN cust_name varchar(100);
+
+ALTER TABLE customer ALTER COLUMN cust_name varchar(50);
+
+select * from customer;
+
+INSERT INTO customer values
+(123456,'Namit Lodh');
+
+--error ALTER TABLE customer ALTER COLUMN cust_name varchar(9);
+
+ALTER TABLE customer ALTER COLUMN cust_name char(50);
